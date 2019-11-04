@@ -1,7 +1,6 @@
 //index created
 PUT /test
 
-
 //see existing indexes
 GET /_cat/indices?v
 
