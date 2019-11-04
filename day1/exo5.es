@@ -35,9 +35,17 @@ PUT /new_bank/_doc/200
     "city": "Martell",
     "state": "MD"
 }
-GET /new_bank/_countl
 
-DELETE /new_bank/_doc/200
+//count documents on index
+GET /new_bank/_count
+
+//idem
+GET /bank/_count
+
+
+
+
+DELETE /new_bank/_doc/202
 
 
 DELETE /new_bank
