@@ -400,3 +400,15 @@ POST /new_bank/_update/49
 }
 
 GET /new_bank/_doc/49   
+
+
+// -----------------------------
+//Helpers for logstash exercises
+
+GET /exo3bis/_count
+
+GET /exo3/_count
+
+GET /exo3/_search
+
+DELETE /exo3bis
