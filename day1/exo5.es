@@ -4,7 +4,7 @@ POST _reindex
   "source": {
     "index": "bank"
   },
-  "dest": {
+  "dest": {     
     "index": "new_bank"
   }
 }
