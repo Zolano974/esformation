@@ -256,6 +256,7 @@ GET /bank/_search
 
 
 //essai 1
+//fail: le must_not traite les 2 conditions de manières séparées et non combinées (i.e les femmes des etats non-TX sont également limitées sur a tranche d'age)
 GET /bank/_search
 {
     "query": {
@@ -289,6 +290,7 @@ GET /bank/_search
 }
 
 //essai 2
+// fail: le should traite les 2 conditions séparément, on a donc des F TX age [25-45], ce qui est non-souhaité
 GET /bank/_search
 {
     "query": {
@@ -324,6 +326,42 @@ GET /bank/_search
     "size" : 100 // default: size :10
 }
 
+//correction: Merci Alex
+//le must_not : bool : must permet que les 2 clauses soient traitées de manière combinée et no séparée
+POST /bank/_search
+{
+    "query": {
+        "bool": {
+            "must_not": {
+                "bool": {
+                    "must": [
+                        {
+                            "term": {
+                                "state.keyword": "TX"
+                            }
+                        },
+                        {
+                            "range": {
+                                "age": {
+                                    "lte": 45,
+                                    "gte": 25
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "filter": [
+                {
+                    "term": {
+                        "gender.keyword": "F"
+                    }
+                }
+            ]
+        }
+    },
+    "size": 100
+}
 
 // -----------------------------------------------------
 //changer l'@ du client "Teri Hester" doc id 200: "538 Fane"
