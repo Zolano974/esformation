@@ -1,6 +1,6 @@
 GET /bank/_search
 
-
+// -----------------------------------------------------
 //chercher les comptes client Fulton et Teri (firstname)
 GET /bank/_search
 {
@@ -24,6 +24,7 @@ GET /bank/_search
 
 // /!\ Différence entre filter et must ==> filter n'affecte pas le score des records retournés, alors que must OUI
 
+// -----------------------------------------------------
 //chercher dans 'bank' le nombre de femmes
 //TODO: pourquoi avec "term" au lieu de "match" je n'ai aucun resultat ???
 // ==> parce que dans le cas de "match", le param d'entrée est préprocessé avant comparison, et dans le cas de "term" non (la valeur est toujours analysée)
@@ -59,7 +60,7 @@ GET /bank/_count
     }
 }
 
-
+// -----------------------------------------------------
 //chercher les jeunes clients (<30 ans)
 //ajouter la parie "size: 3" à la requête
 GET /bank/_search
@@ -75,6 +76,7 @@ GET /bank/_search
     "size": 3
 }
 
+// -----------------------------------------------------
 //chercher avec une seule requête les comptes : 49, 200, 500, 900
 GET /bank/_search
 {
@@ -107,6 +109,7 @@ GET /bank/_search
 }
 
 
+// -----------------------------------------------------
 //chercher les clients de la ville "Belvoir" (with match)
 GET /bank/_search
 {
@@ -139,8 +142,9 @@ GET /bank/_search
     }
 }
 
-//chercher les clients habitant l'état du TX
 
+// -----------------------------------------------------
+//chercher les clients habitant l'état du TX
 GET /bank/_search
 {
     "query": {
@@ -174,6 +178,7 @@ GET /bank/_search
     "size" : 100 // default: size :10
 }
 
+// -----------------------------------------------------
 //chercher les clientes (F) de 25-45 ans habitant le TX
 GET /bank/_search
 {
@@ -238,14 +243,16 @@ GET /bank/_search
     "size" : 100 // default: size :10
 }
 
+
+
+// -----------------------------------------------------
 //chercher toutes les clientes SAUF celles (de 25-45 ans qui habitent l'étt du TX)
 //chercher les clientes (F) de 25-45 ans habitant le TX
 
+    //WARNING : IMPOSSIBLE QUERY ?
 
-//WARNING : IMPOSSIBLE QUERY ?
-
-// `je veux toutes les femmes, sauf celles qui (sont du texas et on 25-45 ans)`
-//GL HaveFun, le formateur n'a pas réussi sur le coup
+    // `je veux toutes les femmes, sauf celles qui (sont du texas et on 25-45 ans)`
+    //GL HaveFun, le formateur n'a pas réussi sur le coup
 
 
 //essai 1
@@ -318,6 +325,7 @@ GET /bank/_search
 }
 
 
+// -----------------------------------------------------
 //changer l'@ du client "Teri Hester" doc id 200: "538 Fane"
 POST /new_bank/_update/200
 {
@@ -328,6 +336,7 @@ POST /new_bank/_update/200
 
 GET /new_bank/_doc/200
 
+// -----------------------------------------------------
 //ajouter un champ "emailpro" a l'utilisateur Fulton Holt id 49
 POST /new_bank/_update/49
 {
@@ -337,3 +346,19 @@ POST /new_bank/_update/49
 }
 
 GET /new_bank/_doc/49
+
+// -----------------------------------------------------
+// INcrémenter l'âge du client Fluton Holt (id 49)
+
+POST /new_bank/_update/49
+{
+    "script" : {
+        "source" : "ctx._source.age += params.ageing",
+        "lang" : "painless",
+        "params" : {
+            "ageing" : 2
+        }
+    }
+}
+
+GET /new_bank/_doc/49   
