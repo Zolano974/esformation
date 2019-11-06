@@ -1,62 +1,24 @@
 {
-    "took": 0,
+    "took": 175,
     "timed_out": false,
     "_shards": {
-        "total": 1,
-        "successful": 1,
+        "total": 3,
+        "successful": 3,
         "skipped": 0,
         "failed": 0
     },
     "hits": {
         "total": {
-            "value": 1000,
+            "value": 493,
             "relation": "eq"
         },
-        "max_score": 1,
+        "max_score": 0.8142251,
         "hits": [
             {
                 "_index": "bank",
                 "_type": "_doc",
-                "_id": "1",
-                "_score": 1,
-                "_source": {
-                    "account_number": 1,
-                    "balance": 39225,
-                    "firstname": "Amber",
-                    "lastname": "Duke",
-                    "age": 32,
-                    "gender": "M",
-                    "address": "880 Holmes Lane",
-                    "employer": "Pyrami",
-                    "email": "amberduke@pyrami.com",
-                    "city": "Brogan",
-                    "state": "IL"
-                }
-            },
-            {
-                "_index": "bank",
-                "_type": "_doc",
-                "_id": "6",
-                "_score": 1,
-                "_source": {
-                    "account_number": 6,
-                    "balance": 5686,
-                    "firstname": "Hattie",
-                    "lastname": "Bond",
-                    "age": 36,
-                    "gender": "M",
-                    "address": "671 Bristol Street",
-                    "employer": "Netagy",
-                    "email": "hattiebond@netagy.com",
-                    "city": "Dante",
-                    "state": "TN"
-                }
-            },
-            {
-                "_index": "bank",
-                "_type": "_doc",
                 "_id": "13",
-                "_score": 1,
+                "_score": 0.8142251,
                 "_source": {
                     "account_number": 13,
                     "balance": 32838,
@@ -74,134 +36,172 @@
             {
                 "_index": "bank",
                 "_type": "_doc",
-                "_id": "18",
-                "_score": 1,
+                "_id": "51",
+                "_score": 0.8142251,
                 "_source": {
-                    "account_number": 18,
-                    "balance": 4180,
-                    "firstname": "Dale",
-                    "lastname": "Adams",
-                    "age": 33,
-                    "gender": "M",
-                    "address": "467 Hutchinson Court",
-                    "employer": "Boink",
-                    "email": "daleadams@boink.com",
-                    "city": "Orick",
+                    "account_number": 51,
+                    "balance": 14097,
+                    "firstname": "Burton",
+                    "lastname": "Meyers",
+                    "age": 31,
+                    "gender": "F",
+                    "address": "334 River Street",
+                    "employer": "Bezal",
+                    "email": "burtonmeyers@bezal.com",
+                    "city": "Jacksonburg",
+                    "state": "MO"
+                }
+            },
+            {
+                "_index": "bank",
+                "_type": "_doc",
+                "_id": "75",
+                "_score": 0.8142251,
+                "_source": {
+                    "account_number": 75,
+                    "balance": 40500,
+                    "firstname": "Sandoval",
+                    "lastname": "Kramer",
+                    "age": 22,
+                    "gender": "F",
+                    "address": "166 Irvington Place",
+                    "employer": "Overfork",
+                    "email": "sandovalkramer@overfork.com",
+                    "city": "Limestone",
+                    "state": "NH"
+                }
+            },
+            {
+                "_index": "bank",
+                "_type": "_doc",
+                "_id": "102",
+                "_score": 0.8142251,
+                "_source": {
+                    "account_number": 102,
+                    "balance": 29712,
+                    "firstname": "Dena",
+                    "lastname": "Olson",
+                    "age": 27,
+                    "gender": "F",
+                    "address": "759 Newkirk Avenue",
+                    "employer": "Hinway",
+                    "email": "denaolson@hinway.com",
+                    "city": "Choctaw",
+                    "state": "NJ"
+                }
+            },
+            {
+                "_index": "bank",
+                "_type": "_doc",
+                "_id": "133",
+                "_score": 0.8142251,
+                "_source": {
+                    "account_number": 133,
+                    "balance": 26135,
+                    "firstname": "Deena",
+                    "lastname": "Richmond",
+                    "age": 36,
+                    "gender": "F",
+                    "address": "646 Underhill Avenue",
+                    "employer": "Sunclipse",
+                    "email": "deenarichmond@sunclipse.com",
+                    "city": "Austinburg",
+                    "state": "SC"
+                }
+            },
+            {
+                "_index": "bank",
+                "_type": "_doc",
+                "_id": "157",
+                "_score": 0.8142251,
+                "_source": {
+                    "account_number": 157,
+                    "balance": 39868,
+                    "firstname": "Claudia",
+                    "lastname": "Terry",
+                    "age": 20,
+                    "gender": "F",
+                    "address": "132 Gunnison Court",
+                    "employer": "Lumbrex",
+                    "email": "claudiaterry@lumbrex.com",
+                    "city": "Castleton",
                     "state": "MD"
                 }
             },
             {
                 "_index": "bank",
                 "_type": "_doc",
-                "_id": "20",
-                "_score": 1,
+                "_id": "188",
+                "_score": 0.8142251,
                 "_source": {
-                    "account_number": 20,
-                    "balance": 16418,
-                    "firstname": "Elinor",
-                    "lastname": "Ratliff",
-                    "age": 36,
-                    "gender": "M",
-                    "address": "282 Kings Place",
-                    "employer": "Scentric",
-                    "email": "elinorratliff@scentric.com",
-                    "city": "Ribera",
-                    "state": "WA"
-                }
-            },
-            {
-                "_index": "bank",
-                "_type": "_doc",
-                "_id": "25",
-                "_score": 1,
-                "_source": {
-                    "account_number": 25,
-                    "balance": 40540,
-                    "firstname": "Virginia",
-                    "lastname": "Ayala",
-                    "age": 39,
+                    "account_number": 188,
+                    "balance": 41504,
+                    "firstname": "Tia",
+                    "lastname": "Miranda",
+                    "age": 24,
                     "gender": "F",
-                    "address": "171 Putnam Avenue",
-                    "employer": "Filodyne",
-                    "email": "virginiaayala@filodyne.com",
-                    "city": "Nicholson",
-                    "state": "PA"
+                    "address": "583 Ainslie Street",
+                    "employer": "Jasper",
+                    "email": "tiamiranda@jasper.com",
+                    "city": "Summerset",
+                    "state": "UT"
                 }
             },
             {
                 "_index": "bank",
                 "_type": "_doc",
-                "_id": "32",
-                "_score": 1,
+                "_id": "234",
+                "_score": 0.8142251,
                 "_source": {
-                    "account_number": 32,
-                    "balance": 48086,
-                    "firstname": "Dillard",
-                    "lastname": "Mcpherson",
-                    "age": 34,
-                    "gender": "F",
-                    "address": "702 Quentin Street",
-                    "employer": "Quailcom",
-                    "email": "dillardmcpherson@quailcom.com",
-                    "city": "Veguita",
-                    "state": "IN"
-                }
-            },
-            {
-                "_index": "bank",
-                "_type": "_doc",
-                "_id": "37",
-                "_score": 1,
-                "_source": {
-                    "account_number": 37,
-                    "balance": 18612,
-                    "firstname": "Mcgee",
-                    "lastname": "Mooney",
-                    "age": 39,
-                    "gender": "M",
-                    "address": "826 Fillmore Place",
-                    "employer": "Reversus",
-                    "email": "mcgeemooney@reversus.com",
-                    "city": "Tooleville",
-                    "state": "OK"
-                }
-            },
-            {
-                "_index": "bank",
-                "_type": "_doc",
-                "_id": "44",
-                "_score": 1,
-                "_source": {
-                    "account_number": 44,
-                    "balance": 34487,
-                    "firstname": "Aurelia",
-                    "lastname": "Harding",
+                    "account_number": 234,
+                    "balance": 44207,
+                    "firstname": "Betty",
+                    "lastname": "Hall",
                     "age": 37,
-                    "gender": "M",
-                    "address": "502 Baycliff Terrace",
-                    "employer": "Orbalix",
-                    "email": "aureliaharding@orbalix.com",
-                    "city": "Yardville",
-                    "state": "DE"
+                    "gender": "F",
+                    "address": "709 Garfield Place",
+                    "employer": "Miraclis",
+                    "email": "bettyhall@miraclis.com",
+                    "city": "Bendon",
+                    "state": "NY"
                 }
             },
             {
                 "_index": "bank",
                 "_type": "_doc",
-                "_id": "49",
-                "_score": 1,
+                "_id": "260",
+                "_score": 0.8142251,
                 "_source": {
-                    "account_number": 49,
-                    "balance": 29104,
-                    "firstname": "Fulton",
-                    "lastname": "Holt",
-                    "age": 23,
+                    "account_number": 260,
+                    "balance": 2726,
+                    "firstname": "Kari",
+                    "lastname": "Skinner",
+                    "age": 30,
                     "gender": "F",
-                    "address": "451 Humboldt Street",
-                    "employer": "Anocha",
-                    "email": "fultonholt@anocha.com",
-                    "city": "Sunriver",
-                    "state": "RI"
+                    "address": "735 Losee Terrace",
+                    "employer": "Singavera",
+                    "email": "kariskinner@singavera.com",
+                    "city": "Rushford",
+                    "state": "WV"
+                }
+            },
+            {
+                "_index": "bank",
+                "_type": "_doc",
+                "_id": "272",
+                "_score": 0.8142251,
+                "_source": {
+                    "account_number": 272,
+                    "balance": 19253,
+                    "firstname": "Lilly",
+                    "lastname": "Morgan",
+                    "age": 25,
+                    "gender": "F",
+                    "address": "689 Fleet Street",
+                    "employer": "Biolive",
+                    "email": "lillymorgan@biolive.com",
+                    "city": "Sunbury",
+                    "state": "OH"
                 }
             }
         ]
