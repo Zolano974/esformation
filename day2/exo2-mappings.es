@@ -24,6 +24,8 @@ GET /bank/_search
 //supprimer index bank
 DELETE /bank
 
+GET /bank
+
 // -----------------------------
 //definir un mapping specifique
 PUT /bank
@@ -31,7 +33,7 @@ PUT /bank
     "settings": {
         "index": {
             "number_of_shards": 3,
-            "number_of_replicas": 2
+            "number_of_replicas": 1
         }
     },
     "mappings": {
