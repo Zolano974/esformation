@@ -1,3 +1,4 @@
+
 GET /bank/_search
 
 // -----------------------------------------------------
@@ -411,4 +412,4 @@ GET /exo3/_count
 
 GET /exo3/_search
 
-DELETE /exo3bis
+DELETE /exo3
